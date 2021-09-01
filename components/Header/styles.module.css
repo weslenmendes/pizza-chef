@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+
+.wrapper {
+  @apply p-4 shadow-md;
+  background-color: #393f41;
+}
+
+.menu {
+  @apply p-4 shadow-md text-center;
+  background-color: rgba(57, 62, 65, 0.9);
+  font-family: "Boogaloo", sans-serif;
+  color: #e5e5e5;
+  font-size: 1.5rem;
+}
+
+.item {
+  @apply px-2;
+}
+
+.item:hover {
+  color: #faddb9;
+}

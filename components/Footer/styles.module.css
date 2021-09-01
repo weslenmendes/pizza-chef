@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+.wrapper {
+  @apply p-4 shadow-md;
+  background-color: #393f41;
+}
+
+.footer {
+  @apply p-6 shadow-md text-center;
+  background-color: rgba(57, 62, 65, 0.9);
+}
+
+.text {
+  @apply my-6;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #e5e5e5;
+  text-align: center;
+}
+
+.link {
+  font-weight: 700;
+  opacity: 0.5;
+  transition: opacity 0.5s linear;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.imgLink {
+  @apply inline-block;
+  opacity: 0.5;
+  transition: opacity 0.5s linear;
+}
+
+.imgLink:hover {
+  opacity: 1;
+}

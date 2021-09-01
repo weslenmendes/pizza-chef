@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-const About = () => {
+const Search = () => {
   return (
     <div>
-      <h1>Sobre</h1>
+      <h1>Pesquisa</h1>
       <div>
         <Link href="/">
           <a>Home</a>
@@ -14,4 +14,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Search;
