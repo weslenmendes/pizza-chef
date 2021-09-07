@@ -18,16 +18,17 @@ export default async (req, res) => {
     const textoCell = sheet.getCell(2, 1);
 
     console.log(textoCell.value);
+    console.log;
 
-    res.end(
+    return res.end(
       JSON.stringify({
         showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
         message: textoCell.value,
       })
     );
   } catch (err) {
-    res.end(
-      JSON.stringify({
+    JSON.stringify(
+      res.end({
         showCoupon: false,
         message: '',
       })

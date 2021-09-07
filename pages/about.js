@@ -1,15 +1,13 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import PageTitle from '../components/PageTitle';
 
 const About = () => {
   return (
-    <div>
-      <h1>Sobre</h1>
-      <div>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </div>
+    <div className="mx-auto my-24">
+      <PageTitle title="Sobre" />
+      <h1 className="text-center text-2xl text-black-300 my-12">
+        Em construção ...
+      </h1>
     </div>
   );
 };

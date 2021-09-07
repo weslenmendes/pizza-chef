@@ -1,11 +1,11 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-import styles from "./styles.module.css";
+import styles from './styles.module.css';
 
 const Header = () => {
   return (
-    <>
+    <header>
       <div className={styles.wrapper}>
         <div className="container mx-auto">
           <Link href="/">
@@ -19,7 +19,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className={styles.menu}>
+      <nav className={styles.menu}>
         <Link href="/about">
           <a className={styles.item}>Sobre</a>
         </Link>
@@ -29,8 +29,8 @@ const Header = () => {
         <Link href="/search">
           <a className={styles.item}>Pesquisa</a>
         </Link>
-      </div>
-    </>
+      </nav>
+    </header>
   );
 };
 

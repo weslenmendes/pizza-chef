@@ -1,18 +1,18 @@
-import React from "react";
-import Link from "next/link";
-import styles from "./styles.module.css";
+import React from 'react';
+import Link from 'next/link';
+import styles from './styles.module.css';
 
 const Footer = () => {
   return (
-    <div className={styles.wrapper}>
+    <footer className={styles.wrapper}>
       <div className={styles.text}>
         <div className="block mb-4">
           Developed by <b>Weslen Mendes</b>
         </div>
 
         <div>
-          <Link href="/github">
-            <a className="inline-block mx-4">
+          <Link href="https://www.github.com/weslenmendes">
+            <a className="inline-block mx-4" target="_blank">
               <img
                 className={styles.imgLink}
                 src="/github-logo.png"
@@ -20,8 +20,8 @@ const Footer = () => {
               />
             </a>
           </Link>
-          <Link href="/linkedin">
-            <a className="inline-block mx-4">
+          <Link href="https://www.linkedin.com/in/weslen-mendes">
+            <a className="inline-block mx-4" target="_blank">
               <img
                 className={styles.imgLink}
                 src="/linkedin-logo.png"
@@ -29,8 +29,8 @@ const Footer = () => {
               />
             </a>
           </Link>
-          <Link href="/facebook">
-            <a className="inline-block mx-4">
+          <Link href="https://www.facebook.com/WeslenMendes7">
+            <a className="inline-block mx-4" target="_blank">
               <img
                 className={styles.imgLink}
                 src="/facebook-logo.png"
@@ -40,7 +40,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

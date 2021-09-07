@@ -1,16 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
 import useSWR from 'swr';
+import PageTitle from '../components/PageTitle';
 
-const fetcher = (...args) => {
-  fetch(...args).then((res) => res.json());
-};
+const fetcher = (...args) => fetch(...args).then((response) => response.json());
 
 const Index = () => {
   const { data, error } = useSWR('/api/get-promo', fetcher);
 
   return (
-    <main>
+    <div>
+      <PageTitle title="Seja bem-vindo - Pizza Chef" />
       <p className="my-12 text-center paragraph text-wrap">
         A pizzaria Pizza Chef quer sempre oferecer o melhor serviço aos seus
         clientes.
@@ -25,7 +25,7 @@ const Index = () => {
       {!error && data && data.showCoupon && (
         <p className="my-12 text-center paragraph">{data.message}</p>
       )}
-    </main>
+    </div>
   );
 };
 
