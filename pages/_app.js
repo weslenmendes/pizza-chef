@@ -1,19 +1,20 @@
 import React from "react";
+import Head from "next/head";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Layout from "../components/Layout";
 
 import "../css/styles.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
-    <div>
-      <Header />
-      <div className="container mx-auto">
+    <>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
+      <Layout>
         <Component {...pageProps} />
-      </div>
-      <Footer />
-    </div>
+      </Layout>
+    </>
   );
 };
 

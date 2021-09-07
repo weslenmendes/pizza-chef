@@ -10,7 +10,7 @@ const Footer = () => {
           Developed by <b>Weslen Mendes</b>
         </div>
 
-        <div className="">
+        <div>
           <Link href="/github">
             <a className="inline-block mx-4">
               <img

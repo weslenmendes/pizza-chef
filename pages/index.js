@@ -1,22 +1,32 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
+import useSWR from 'swr';
+import axios from 'axios';
+
+const fetcher = (...args) => {
+  fetch(...args).then((res) => res.json());
+};
 
 const Index = () => {
+  const { data, error } = useSWR('/api/get-promo', fetcher);
+
   return (
-    <div>
-      <h1>Ola Semana FullStack Master!</h1>
-      <div>
-        <Link href="/about">
-          <a>Sobre</a>
-        </Link>
-        <Link href="/contact">
-          <a>Contato</a>
-        </Link>
+    <main>
+      <p className="my-12 text-center paragraph text-wrap">
+        A pizzaria Pizza Chef quer sempre oferecer o melhor serviço aos seus
+        clientes.
+        <br /> Por isso, estamos dispostos a ouvir a sua opinião.
+      </p>
+      <div className="text-center my-12">
         <Link href="/search">
-          <a>Pesquisa</a>
+          <a className="button">Dar opinião ou sugestão</a>
         </Link>
       </div>
-    </div>
+      {!data && <p className="my-12 text-center paragraph">Carregando...</p>}
+      {!error && data && data.showCoupon && (
+        <p className="my-12 text-center paragraph">{data.message}</p>
+      )}
+    </main>
   );
 };
 

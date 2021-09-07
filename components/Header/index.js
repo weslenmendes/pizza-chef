@@ -8,11 +8,15 @@ const Header = () => {
     <>
       <div className={styles.wrapper}>
         <div className="container mx-auto">
-          <img
-            className="mx-auto"
-            src="/logo-pizza-chef.png"
-            alt="Pizza Chef"
-          />
+          <Link href="/">
+            <a className="mx-auto">
+              <img
+                className="mx-auto"
+                src="/logo-pizza-chef.png"
+                alt="Pizza Chef"
+              />
+            </a>
+          </Link>
         </div>
       </div>
       <div className={styles.menu}>

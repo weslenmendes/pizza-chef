@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+
+.button {
+  @apply px-6 py-4 rounded-lg shadow-lg;
+  font-family: Boogaloo, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  border-bottom-color: #852526;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  background-color: #f7c05c;
+  filter: brightness(100%);
+  animation: filter 0.7s linear;
+}
+
+.button:hover {
+  filter: brightness(96%);
+}
+
+.paragraph {
+  @apply text-lg;
+  font-family: 'IBM Plex Serif', sans-serif;
+}
+
+.title {
+  font-family: Boogaloo, sans-serif;
+  font-size: 2rem;
+}
+
+.bgPrincipal {
+  background-color: #d3d0cb;
+}
+
+.inputText {
+  font-family: 'IBM Plex Serif', sans-serif;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #393e41;
+}
+
+.textLabel {
+  font-family: Boogaloo, sans-serif;
+  font-size: 1.5rem;
+}
