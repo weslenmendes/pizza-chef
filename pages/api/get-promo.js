@@ -4,7 +4,6 @@ import { fromBase64 } from '../../utils/base64';
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID);
 
 export default async (req, res) => {
-  console.log(fromBase64(`${process.env.SHEET_PRIVATE_KEY}`));
   try {
     await doc.useServiceAccountAuth({
       client_email: process.env.SHEET_CLIENT_EMAIL,
@@ -19,18 +18,14 @@ export default async (req, res) => {
     const mostrarPromocaoCell = sheet.getCell(2, 0);
     const textoCell = sheet.getCell(2, 1);
 
-    return res.end(
-      JSON.stringify({
-        showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
-        message: textoCell.value,
-      })
-    );
+    return res.json({
+      showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
+      message: textoCell.value,
+    });
   } catch (err) {
-    JSON.stringify(
-      res.end({
-        showCoupon: false,
-        message: '',
-      })
-    );
+    res.json({
+      showCoupon: false,
+      message: '',
+    });
   }
 };
