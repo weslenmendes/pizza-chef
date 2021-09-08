@@ -2,11 +2,16 @@ import { GoogleSpreadsheet } from 'google-spreadsheet';
 
 const doc = new GoogleSpreadsheet(process.env.SHEET_DOC_ID);
 
+const fromBase64 = (value) => {
+  let buff = new Buffer(value, 'base64');
+  return buff.toString('ascii');
+};
+
 export default async (req, res) => {
   try {
     await doc.useServiceAccountAuth({
       client_email: process.env.SHEET_CLIENT_EMAIL,
-      private_key: process.env.SHEET_PRIVATE_KEY,
+      private_key: fromBase64(process.env.SHEET_PRIVATE_KEY),
     });
 
     await doc.loadInfo();
@@ -16,9 +21,6 @@ export default async (req, res) => {
 
     const mostrarPromocaoCell = sheet.getCell(2, 0);
     const textoCell = sheet.getCell(2, 1);
-
-    console.log(textoCell.value);
-    console.log;
 
     return res.end(
       JSON.stringify({
