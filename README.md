@@ -13,8 +13,8 @@ Esse projeto foi construido durante o treinamento FullStack Master do [DevPleno]
 ## 🛠 Tecnologias usadas
 
 - [NextJS](https://nextjs.org) - The React Framework
-- [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework for rapidly building custom designs.
-- [Figam](https://figma.com) - Online prototyping tool.
+- [TailwindCSS](https://tailwindcss.com) - A utility-first CSS framework for rapidly building custom designs
+- [Figam](https://figma.com) - Online prototyping tool
 - [Google Sheets](https://docs.google.com/spreadsheets) - Planilhas online do google
 
 ## 🚀 Rodando o projeto
