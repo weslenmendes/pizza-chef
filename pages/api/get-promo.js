@@ -18,6 +18,8 @@ export default async (req, res) => {
     const mostrarPromocaoCell = sheet.getCell(2, 0);
     const textoCell = sheet.getCell(2, 1);
 
+    console.lof;
+
     return res.json({
       showCoupon: mostrarPromocaoCell.value === 'VERDADEIRO',
       message: textoCell.value,
@@ -26,6 +28,7 @@ export default async (req, res) => {
     res.json({
       showCoupon: false,
       message: '',
+      error: err,
     });
   }
 };
